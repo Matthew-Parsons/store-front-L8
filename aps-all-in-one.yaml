@@ -1,3 +1,12 @@
+# ConfigMap for for RabbitMQ
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rabbitmq-enabled-plugins
+data:
+  rabbitmq_enabled_plugins: |
+    [rabbitmq_management,rabbitmq_prometheus,rabbitmq_amqp1_0].
+---
 # StatefulSet for MongoDB
 apiVersion: apps/v1
 kind: StatefulSet
